@@ -123,19 +123,7 @@ Custom OBJ meshes are auto-copied to MiniWorld's mesh directory on first run.
 - PyTorch 2.0+
 - Gymnasium
 - MiniWorld
-- Gradio 4.0+
-- Display (for MiniWorld rendering)
-
-## Citation
-
-```bibtex
-@inproceedings{mnih2016asynchronous,
-  title={Asynchronous methods for deep reinforcement learning},
-  author={Mnih, Volodymyr and others},
-  booktitle={ICML},
-  year={2016}
-}
-```
+- Gradio
 
 
 Leave am for Chief Mazi 🙈🔥😂
