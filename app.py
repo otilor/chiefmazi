@@ -10,8 +10,11 @@ from worker import worker
 from model import A3C_Labyrinth_Net
 from shared_optim import SharedRMSprop
 
-NUM_WORKERS = 16
-MAX_FRAMES = 10_000_000
+import os
+
+# M2 MacBook has 8 performance cores - match workers to CPU count
+NUM_WORKERS = min(os.cpu_count() or 8, 8)
+MAX_FRAMES = 1_000_000  # 1M for faster iteration; increase to 10M for full training
 
 
 class TrainingState:
@@ -146,7 +149,7 @@ def main():
         
         with gr.Row():
             with gr.Column(scale=1):
-                agent_view = gr.Image(label="Agent View", height=250)
+                agent_view = gr.Image(label="Agent View", height=250, interactive=False)
                 stats = gr.Markdown()
                 losses = gr.Markdown()
                 actions = gr.Markdown()

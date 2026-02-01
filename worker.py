@@ -9,7 +9,7 @@ from model import A3C_Labyrinth_Net
 
 GAMMA = 0.99
 BETA = 0.01
-T_MAX = 5
+T_MAX = 20  # Larger n-step reduces sync overhead (paper used 5, but 20 is faster)
 GRAD_CLIP = 40.0
 
 
@@ -28,7 +28,7 @@ def _run_worker(rank, global_model, optimizer, global_counter, global_episodes,
                 max_frames, lock, ui_state=None):
     import miniworld
     
-    env = gym.make("MiniWorld-Maze-v0", view='top', render_mode='rgb_array')
+    env = gym.make("MiniWorld-Maze-v0", view='agent', render_mode='rgb_array')
     env = LabyrinthWrapper(env)
     
     preprocess = transforms.Compose([

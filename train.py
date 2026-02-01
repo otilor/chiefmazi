@@ -1,4 +1,5 @@
 """Headless A3C training script."""
+import os
 import torch
 import torch.multiprocessing as mp
 import time
@@ -7,8 +8,9 @@ from model import A3C_Labyrinth_Net
 from shared_optim import SharedRMSprop
 from worker import worker
 
-NUM_WORKERS = 16
-MAX_FRAMES = 10_000_000
+# M2 MacBook has 8 performance cores - match workers to CPU count
+NUM_WORKERS = min(os.cpu_count() or 8, 8)
+MAX_FRAMES = 1_000_000  # 1M for faster iteration; increase to 10M for full training
 
 
 def main():
