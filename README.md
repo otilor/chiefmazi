@@ -2,7 +2,7 @@
 
 PyTorch implementation of **Asynchronous Advantage Actor-Critic (A3C)** for 3D maze navigation, based on [Mnih et al. 2016](https://arxiv.org/abs/1602.01783).
 
-![Dashboard](dashboard.png)
+![Dashboard](screengrab.png)
 
 ## Overview
 
