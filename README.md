@@ -137,8 +137,5 @@ Custom OBJ meshes are auto-copied to MiniWorld's mesh directory on first run.
 }
 ```
 
-## License
-
-MIT
 
 Leave am for Chief Mazi 🙈🔥😂
