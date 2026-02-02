@@ -96,14 +96,14 @@ Custom OBJ meshes are auto-copied to MiniWorld's mesh directory on first run.
 
 ## Hyperparameters
 
-| Parameter | Value | Source |
-|-----------|-------|--------|
-| Workers | 16 | Section 8 |
-| Learning rate | 1e-4 | Section 8 |
-| Discount (γ) | 0.99 | Section 8 |
-| Entropy weight (β) | 0.01 | Section 8 |
-| n-step | 5 | Section 8 |
-| Gradient clip | 40.0 | Section 8 |
+| Parameter | Value
+|-----------|-------
+| Workers | 16
+| Learning rate | 1e-4
+| Discount (γ) | 0.99
+| Entropy weight (β) | 0.01
+| n-step | 5
+| Gradient clip | 40.0
 
 ## Implementation Details
 
